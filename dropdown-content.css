@@ -1,0 +1,55 @@
+@media(min-width: 1150px){
+    .desktop{
+        position: relative;
+        display: inline-block;
+    }
+}
+.dropdown-content{
+ position: absolute;
+ z-index: 9;
+ background-color: #fffafa;
+ min-width: 160px;
+ display: none;
+}
+
+.dropdown-content a{
+    padding: 12px 16px;
+    color: inherit;
+    display:block;
+}
+
+.desktop1:hover .dropdown-content{
+    display: block;
+}
+.desktop2:hover .dropdown-content{
+    display: block;
+}
+.desktop3:hover .dropdown-content{
+    display: block;
+}
+.desktop4:hover .dropdown-content{
+    display: block;
+}
+.desktop5:hover .dropdown-content{
+    display: block;
+}
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+
+.desktop1:hover{
+    background-color: white;
+}
+.desktop2:hover{
+    background-color: white;
+}
+.desktop3:hover{
+    background-color: white;
+}
+.desktop4:hover{
+    background-color: white;
+}
+.desktop5:hover{
+    background-color: white;
+}

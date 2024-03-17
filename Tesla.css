@@ -1,0 +1,270 @@
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+1:wght@500&display=swap');
+
+:root{
+    --teslaColor: #000;
+}
+*{
+    padding: 0;
+    margin:0;
+    box-sizing: border-box;
+}
+/* --------scroll------ */
+html{
+    scroll-behavior:smooth;
+}
+/* --------scroll------ */
+body{
+    color: #000;
+    font-family: 'M PLUS 1', sans-serif;
+}
+
+.desktop{
+    display: none;
+}
+.menu-icon{
+    border: 0.1px solid rgba(0, 0, 0, 0.2);
+    color: white;
+    background: rgba(98, 96, 96, 0.8);
+    border-radius: 5px;
+}
+/* make some header elements dissapear */
+@media(min-width: 1150px){
+    .desktop{
+        display:initial;
+    }
+    .menu-icon{
+        display: none;
+    }
+}
+header{
+    margin-top: 10px;
+    display: grid;
+    grid-template-columns: 100px auto;
+    padding:5px 20px;
+    position: fixed;
+    top:0;
+    z-index: 2;
+    width: 100%;
+}
+
+header nav.right{
+    display: grid;
+    grid-template-columns: 1fr auto;
+    text-align: right;
+}
+
+a.logo{
+    display:inline;
+    height: 12px;
+    width: 100px;
+    color:inherit;
+}
+header nav a{
+    text-decoration: none;
+    padding: 5px 10px;
+}
+header a{
+    color: inherit;
+}
+
+header nav.center{
+    text-align: center;
+}
+
+section.product-name{
+    height: 100vh;
+    /* border: 5px solid rgb(4, 4, 4)251, 251, 251); */
+}
+
+.content-special{
+    width: 100%;
+    height: 100vh;
+    padding-top: 9.5vh;
+    padding-bottom: 10vh;
+    text-align: center;
+    display: grid;
+    grid-template-rows: auto min-content;
+}
+.buttons-special{
+    row-gap: 15px;
+    margin: 0 40px;
+}
+.button1-special{
+    background-color: white;
+    display: grid;
+    grid-template-rows: 1fr;
+    color: var(--teslaColor);
+    padding: 10px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight:500;
+    width: 264px;
+    margin: auto;
+}
+.buttons-special2{
+    row-gap: 15px;
+    margin: 0 40px;
+}
+.button1-special2{
+    border: 2px solid white;
+    background-color: rgb(0, 0, 0, 0.2);
+    display: grid;
+    grid-template-rows: 1fr;
+    color:white;
+    padding: 10px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight:500;
+    width: 264px;
+    margin: auto;
+}
+
+video {
+    width: 100%;
+    display: flex;
+    height: auto;
+    background-position: center center;
+    background-repeat: no-repeat;
+    object-fit: cover;
+    background-size: cover;
+    overflow: hidden;
+}
+@media (max-width: 599px) {
+    video{
+        width: 110%;
+        height: 100vh;
+    }
+}
+@media (min-width: 600px) {
+    /* Adjust video size for larger screens */
+    video {
+        width: 110%;
+        height: 100vh;
+    }
+}
+
+@media (min-width: 900px) {
+    /* Further adjustments for even larger screens */
+    video {
+        width: 110%;
+        height: 100vh;
+    }
+}
+/* Hide default video controls
+video::-webkit-media-controls {
+    display:none !important;
+}
+
+video::-webkit-media-controls-enclosure {
+    display:none !important;
+}
+
+video::-webkit-media-controls-panel {
+    display:none !important;
+}
+
+video::-webkit-media-controls-play-button {
+    display:none !important;
+} */
+section{
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+section .content{
+    width: 100%;
+    height: 100vh;
+    padding-top: 9.5vh;
+    padding-bottom: 10vh;
+    text-align: center;
+    display: grid;
+    grid-template-rows: min-content auto min-content;
+}
+
+h1{
+    font-size: 48px;
+}
+
+section a{
+    color: var(--teslaColor);
+}
+
+/* ---------for small screen, buttons to be on top each other-------------- */
+section div.buttons a{
+    display: block;
+    background-color: #eee;
+    color: var(--teslaColor);
+    padding: 10px 50px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight:500;
+}
+
+section .buttons .button1{
+    color: inherit;
+    background-color: white;
+}
+section .buttons .button2{
+    color: white;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+section .buttons{
+    display: grid;
+    row-gap: 15px;
+    margin: 0 40px;
+}
+
+@media (min-width: 600px) {
+    section .buttons{
+        justify-content: center;
+        align-items: center;
+        grid-template-columns: 264px 264px;
+        column-gap: 20px;
+    }
+}
+.language{
+    display: grid;
+    grid-template-columns: 30px auto;
+
+}
+aside.active{
+    right: 0;
+}
+aside{
+    position: fixed;
+    width:100%;
+    right: -10000px;
+    height: 100vh;
+    background-size: 100% 100%;
+    background-color: white;
+    color: #000;
+    z-index: 4;
+    padding: 80px 30px;
+    font-size: 1.2rem;
+    transition: right .5s ease;
+}
+
+aside a{
+    display: block;
+    text-decoration: none;
+    color: #000;
+    padding: 20px;
+}
+aside button.close{
+    font-size: 2rem;
+    border: none;
+    background-color: transparent;
+    position: absolute;
+    top: 10px;
+    right:15px;
+    font-family: inherit;
+    font-weight: 100;
+    cursor: pointer;
+}
+

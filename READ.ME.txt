@@ -1,0 +1,2 @@
+1. Original Images and videos FROM tesla website is blurry or cannot be found. So I replace them with I found instead!
+2. Scroll snapping js, I learned from "coding with Dawid", however, David codes have bugs as they won't scoll snap after some period of time. So I fix it but NOT REALLY, as they work well only in smaller screen. So feel free to fix that.
